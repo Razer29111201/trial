@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quản Lý Công Việc Cá Nhân</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/grid.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="header-title">Quản Lý Công Việc Cá Nhân</h1>
+  </header>
+  <div class="grid">
+    <div class="row">
+      <div class="col m-2">
+        <aside class="sidebar">
+          <nav>
+            <ul class="sidebar-menu">
+              <li>
+                <a href="#">Trải nghiệm</a>
+              </li>
+              <li class="submenu">
+                <a href="#">Thông tin giáo viên</a>
+                <ul class="sidebar-submenu">
+                  <li><a href="#">Chỉ số giáo viên</a></li>
+                  <li><a href="#">Các lớp của giáo viên</a></li>
+                  <li><a href="#">Giáo viên confirm</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <div class="col m-10">
+        <div class="header_body">
+          <div class="add-task">
+            <label>Từ ngày:</label>
+            <input type="date" id="startDate">
+
+            <label>Đến ngày:</label>
+            <input type="date" id="endDate">
+            <button onclick="filterByDateRange()">Lọc</button>
+            <button id="reset">Reset</button>
+
+            <button><a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeOjPrX_10UnSa3li_wT5EYdnrLPjnN1a69rlTxB3JsP5hYVw/viewform?usp=header">Thêm</a></button>
+          </div>
+          <div class="task-stats">
+            <p>Tổng số case: <span id="totalCases">0</span></p>
+            <p>Thành công: <span id="successCases">0</span></p>
+            <p>Bị hủy: <span id="canceledCases">0</span></p>
+          </div>
+        </div>
+
+        <table id="taskTable">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th style="width: 180px;">Tư vấn</th>
+              <th style="width: 180px;">Tên học viên</th>
+              <th style="min-width: 90px;">Lớp</th>
+              <th>Bộ môn</th>
+              <th>Ngày</th>
+              <th>Giờ</th>
+              <th>Loại</th>
+              <th>Trạng thái</th>
+              <th style="min-width: 150px;">Giáo viên</th>
+
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

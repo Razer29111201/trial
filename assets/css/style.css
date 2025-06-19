@@ -1,0 +1,275 @@
+body {
+
+    background: #f2f2f2;
+    margin: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background: #c842a2;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header .header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+}
+
+header .header-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+header .header-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskTable {
+    max-height: 400px;
+    /* chiều cao tối đa */
+    overflow-y: auto;
+    display: block;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background: #f8f8f8;
+    z-index: 1;
+    border-bottom: 2px solid #ccc;
+}
+
+thead>th {
+    width: 100%;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.add-task {
+    height: 80px;
+    display: flex;
+    gap: 32px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin: 16px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    font-size: 16px;
+    align-items: center;
+}
+
+input,
+select {
+    padding: 6px;
+    margin: 4px;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#taskTable {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Căn giữa nội dung các ô */
+#taskTable td,
+#taskTable th {
+    text-align: center;
+}
+
+.header_body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.task-stats {
+    height: 80px;
+    display: flex;
+    gap: 32px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin: 16px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    font-size: 16px;
+    align-items: center;
+}
+
+.task-stats p {
+    margin: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stats-label {
+    color: #333;
+}
+
+.stats-label.success {
+    color: #28a745;
+}
+
+.stats-label.canceled {
+    color: #dc3545;
+}
+
+.stats-value {
+    font-weight: bold;
+    font-size: 18px;
+    min-width: 24px;
+    display: inline-block;
+}
+
+/* sidebar */
+.sidebar {
+    background: #f5f6fa;
+    border-radius: 8px;
+    padding: 20px 10px;
+    min-height: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.sidebar:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu>li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.sidebar-menu>li>a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-menu>li>a:hover {
+    background: #e1e7fd;
+    color: #1a73e8;
+}
+
+.submenu>a::after {
+    content: '▼';
+    float: right;
+    font-size: 0.8em;
+    margin-top: 3px;
+    transition: transform 0.2s;
+}
+
+.sidebar-submenu {
+    display: none;
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.submenu.open>.sidebar-submenu {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+.sidebar-submenu li a {
+    display: block;
+    padding: 8px 16px;
+    color: #555;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-submenu li a:hover {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.submenu.open>a::after {
+    transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
