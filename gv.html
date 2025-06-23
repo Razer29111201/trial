@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Công Việc Cá Nhân</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Quản Lý Công Việc Cá Nhân</h1>
+    </header>
+    <div class="grid">
+        <div class="row">
+            <div class="col m-2">
+                <aside class="sidebar">
+                    <nav>
+                        <ul class="sidebar-menu">
+                            <li>
+                                <a href="#">Trải nghiệm</a>
+                            </li>
+                            <li class="submenu">
+                                <a href="#">Thông tin giáo viên</a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="#">Chỉ số giáo viên</a></li>
+                                    <li><a href="#">Các lớp của giáo viên</a></li>
+                                    <li><a href="#">Giáo viên confirm</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+            <div class="col m-10">
+                <div class="header_body">
+                    <div class="add-task">
+                        <label>Từ ngày:</label>
+                        <input type="date" id="startDate">
+
+                        <label>Đến ngày:</label>
+                        <input type="date" id="endDate">
+                        <button onclick="filterByDateRange()">Lọc</button>
+                        <button id="reset">Reset</button>
+
+                        <button><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeOjPrX_10UnSa3li_wT5EYdnrLPjnN1a69rlTxB3JsP5hYVw/viewform?usp=header">Thêm</a></button>
+                    </div>
+                    <div class="task-stats">
+                        <p><span class="stats-label">Tổng số case:</span> <span id="totalCases"
+                                class="stats-value">0</span></p>
+                        <p><span class="stats-label success">Thành công:</span> <span id="successCases"
+                                class="stats-value">0</span>
+                        </p>
+                        <p><span class="stats-label canceled">Bị hủy:</span> <span id="canceledCases"
+                                class="stats-value">0</span>
+                        </p>
+                    </div>
+
+                </div>
+
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên giáo viên</th>
+                            <th>Code LMS</th>
+                            <th>CPR</th>
+                            <th>TP</th>
+                            <th>Trung bình sư phạm</th>
+                            <th colspan="2">Kiểm tra chuyên sâu</th>
+                            <th>Sư phạm</th>
+                            <th>Tổng điểm</th>
+                            <th>Rank</th>
+                            <th>Đánh giá</th>
+                        </tr>
+                        <tr>
+                            <th colspan="6"></th>
+                            <th>Technical</th>
+                            <th>Trial</th>
+                            <th colspan="3"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>GV001</td>
+                            <td>8.5</td>
+                            <td>7.0</td>
+                            <td>8.0</td>
+                            <td>9.0</td>
+                            <td>8.5</td>
+                            <td>8.2</td>
+                            <td>8.4</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Trần Thị B</td>
+                            <td>GV002</td>
+                            <td>8.0</td>
+                            <td>7.5</td>
+                            <td>8.3</td>
+                            <td>8.8</td>
+                            <td>8.0</td>
+                            <td>8.1</td>
+                            <td>8.2</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lê Văn C</td>
+                            <td>GV003</td>
+                            <td>7.5</td>
+                            <td>7.2</td>
+                            <td>7.8</td>
+                            <td>8.0</td>
+                            <td>7.9</td>
+                            <td>7.7</td>
+                            <td>7.8</td>
+                            <td>C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./assets/js/gv.js"></script>
+
+</body>
+
+</html>

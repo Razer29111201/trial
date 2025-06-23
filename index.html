@@ -49,10 +49,13 @@
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeOjPrX_10UnSa3li_wT5EYdnrLPjnN1a69rlTxB3JsP5hYVw/viewform?usp=header">Thêm</a></button>
           </div>
           <div class="task-stats">
-            <p>Tổng số case: <span id="totalCases">0</span></p>
-            <p>Thành công: <span id="successCases">0</span></p>
-            <p>Bị hủy: <span id="canceledCases">0</span></p>
+            <p><span class="stats-label">Tổng số case:</span> <span id="totalCases" class="stats-value">0</span></p>
+            <p><span class="stats-label success">Thành công:</span> <span id="successCases" class="stats-value">0</span>
+            </p>
+            <p><span class="stats-label canceled">Bị hủy:</span> <span id="canceledCases" class="stats-value">0</span>
+            </p>
           </div>
+
         </div>
 
         <table id="taskTable">

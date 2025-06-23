@@ -48,6 +48,12 @@ header .header-title {
     text-transform: uppercase;
 }
 
+/* Đảm bảo tiêu đề header luôn căn giữa, không bị cắt và hiển thị đầy đủ */
+
+
+/* Tiêu đề của bảng */
+
+
 table {
     width: 100%;
     border-collapse: collapse;

@@ -1,7 +1,52 @@
 let allTasks = []; // lưu tất cả task gọi từ Apps Script
 
+
+
+// Hiển thị animation loading dạng sóng trong phần bảng
+function showLoadingWave() {
+  const tableBody = document.getElementById("taskTable").getElementsByTagName('tbody')[0];
+  tableBody.innerHTML = `
+    <tr>
+      <td colspan="10" style="text-align:center; padding: 40px 0;">
+        <div class="wave-loader">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+// Thêm CSS cho hiệu ứng sóng
+const style = document.createElement('style');
+style.innerHTML = `
+.wave-loader {
+  display: inline-block;
+  height: 30px;
+}
+.wave-loader span {
+  display: inline-block;
+  width: 8px;
+  height: 100%;
+  margin: 0 2px;
+  background: #3498db;
+  border-radius: 4px;
+  animation: wave 1s infinite ease-in-out;
+}
+.wave-loader span:nth-child(2) { animation-delay: 0.1s; }
+.wave-loader span:nth-child(3) { animation-delay: 0.2s; }
+.wave-loader span:nth-child(4) { animation-delay: 0.3s; }
+.wave-loader span:nth-child(5) { animation-delay: 0.4s; }
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+`;
+document.head.appendChild(style);
+
+// Gọi showLoadingWave() trước khi fetch dữ liệu
 async function data() {
   try {
+    showLoadingWave();
     console.log("🔄 Đang gọi Apps Script...");
     const res = await fetch("https://script.google.com/macros/s/AKfycbzwkST95xuDJW_sXBDaNiv4221mTnnewJ1JY3s1VPcBzmXTyZileK4TGRn77nqh804/exec");
     const json = await res.json();
@@ -105,3 +150,15 @@ resetButton.addEventListener("click", function () {
   document.getElementById("successCases").textContent = success;
   document.getElementById("canceledCases").textContent = canceled;
 })
+
+
+
+
+// sidebar
+document.addEventListener('DOMContentLoaded', function () {
+  var submenu = document.querySelector('.submenu');
+  submenu.querySelector('a').addEventListener('click', function (e) {
+    e.preventDefault();
+    submenu.classList.toggle('open');
+  });
+});
