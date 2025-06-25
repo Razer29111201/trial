@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/grid.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
@@ -16,23 +18,7 @@
   <div class="grid">
     <div class="row">
       <div class="col m-2">
-        <aside class="sidebar">
-          <nav>
-            <ul class="sidebar-menu">
-              <li>
-                <a href="#">Trải nghiệm</a>
-              </li>
-              <li class="submenu">
-                <a href="#">Thông tin giáo viên</a>
-                <ul class="sidebar-submenu">
-                  <li><a href="#">Chỉ số giáo viên</a></li>
-                  <li><a href="#">Các lớp của giáo viên</a></li>
-                  <li><a href="#">Giáo viên confirm</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </aside>
+        <div id="sidebar"></div>
       </div>
       <div class="col m-10">
         <div class="header_body">
@@ -82,7 +68,7 @@
   </div>
 
 
-
+  <script src="./assets/js/sidebar.js"></script>
   <script src="./assets/js/main.js"></script>
 
 </body>

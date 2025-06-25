@@ -1,7 +1,7 @@
 body {
 
     background: #f2f2f2;
-    margin: 40px;
+
 }
 
 h1 {
@@ -14,10 +14,9 @@ header {
     align-items: center;
     justify-content: center;
     height: 100px;
-    background: #c842a2;
+    background: #f44336;
     color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
     margin-bottom: 30px;
 }
 
@@ -61,12 +60,6 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#taskTable {
-    max-height: 400px;
-    /* chiều cao tối đa */
-    overflow-y: auto;
-    display: block;
-}
 
 th,
 td {
@@ -81,14 +74,16 @@ thead {
     background: #f8f8f8;
     z-index: 1;
     border-bottom: 2px solid #ccc;
+    max-width: 300px;
 }
+
 
 thead>th {
     width: 100%;
 }
 
 th {
-    background-color: #007bff;
+    background-color: #C455A8;
     color: white;
 }
 
@@ -207,14 +202,14 @@ button:hover {
 
 .sidebar-menu {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.sidebar-menu>li {
-    margin-bottom: 10px;
-    position: relative;
+.sidebar-menu>li:hover .sidebar-submenu {
+    display: block;
+    animation: fadeIn 0.3s;
 }
+
+
 
 .sidebar-menu>li>a {
     display: block;
@@ -230,19 +225,18 @@ button:hover {
     color: #1a73e8;
 }
 
-.submenu>a::after {
-    content: '▼';
-    float: right;
-    font-size: 0.8em;
-    margin-top: 3px;
-    transition: transform 0.2s;
-}
+
 
 .sidebar-submenu {
     display: none;
     list-style: none;
     padding-left: 10px;
-    margin-top: 5px;
+
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
 }
 
 .submenu.open>.sidebar-submenu {
@@ -250,23 +244,32 @@ button:hover {
     animation: fadeIn 0.3s;
 }
 
-.sidebar-submenu li a {
+.sidebar-menu i {
     display: block;
-    padding: 8px 16px;
-    color: #555;
+    margin-right: 10px;
+    font-size: 12px;
+
+}
+
+.sidebar-submenu li {
+
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    padding-left: 10px;
     border-radius: 4px;
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    margin: 5px;
 }
 
-.sidebar-submenu li a:hover {
+.sidebar-submenu li:hover {
     background: #dbeafe;
     color: #2563eb;
 }
 
-.submenu.open>a::after {
-    transform: rotate(180deg);
-}
+
 
 @keyframes fadeIn {
     from {

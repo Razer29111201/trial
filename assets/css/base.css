@@ -15,9 +15,7 @@ html {
 
 
 
-body {
-    line-height: 1;
-}
+body {}
 
 ol,
 ul {
@@ -40,4 +38,28 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+.container .hidden {
+    display: none;
+}
+
+.table_full_width {
+    width: 100%;
+    height: 400px;
+    /* chiều cao tối đa */
+    overflow-y: auto;
+    display: table;
+
+}
+
+.scroll {
+    max-height: 400px;
+    /* chiều cao tối đa */
+    overflow-y: auto;
+}
+
+.bg_sidebar {
+    background-color: #C455A8;
+    color: #fff;
 }

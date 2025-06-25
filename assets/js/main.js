@@ -154,11 +154,3 @@ resetButton.addEventListener("click", function () {
 
 
 
-// sidebar
-document.addEventListener('DOMContentLoaded', function () {
-  var submenu = document.querySelector('.submenu');
-  submenu.querySelector('a').addEventListener('click', function (e) {
-    e.preventDefault();
-    submenu.classList.toggle('open');
-  });
-});
