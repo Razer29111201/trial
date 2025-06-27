@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Nhập / Đăng Ký</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/acc.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" id="loginTab">Đăng Nhập</div>
+            <div class="tab" id="registerTab">Đăng Ký</div>
+        </div>
+        <form id="loginForm" class="active" autocomplete="off">
+            <input type="text" id="input_user_dn" placeholder="Tên đăng nhập" required>
+            <input type="password" id="input_pass_dn" placeholder="Mật khẩu" required>
+            <button id="dangnhap" type="submit">Đăng Nhập</button>
+        </form>
+        <form id="registerForm" autocomplete="off">
+            <input type="text" placeholder="Tên đăng nhập" id="input_user_dk" required>
+            <input type="email" placeholder="Email" id="input_mail_dk" required>
+            <input type="password" placeholder="Mật khẩu" id="input_pass_dk" required>
+            <button id="dangky" type="submit">Đăng Ký</button>
+        </form>
+    </div>
+    <script type="module" src="./assets/js/acc.js"></script>
+</body>
+
+</html>

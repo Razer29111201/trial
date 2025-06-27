@@ -142,7 +142,7 @@ button:hover {
 .header_body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 
@@ -252,7 +252,7 @@ button:hover {
 }
 
 .sidebar-submenu li {
-
+    font-size: 14px;
     display: flex;
     align-items: center;
     line-height: 2;

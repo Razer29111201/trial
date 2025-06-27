@@ -1,0 +1,105 @@
+body {
+    background: #f44336;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    width: 340px;
+    padding: 32px 24px;
+    animation: fadeIn 1s;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #f44336;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+    user-select: none;
+}
+
+.tab.active {
+    border-bottom: 2px solid #C455A8;
+    color: #C455A8;
+    animation: tabActive 0.4s;
+}
+
+@keyframes tabActive {
+    from {
+        color: #f44336;
+    }
+
+    to {
+        color: #C455A8;
+    }
+}
+
+form {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    animation: fadeIn 0.6s;
+}
+
+form.active {
+    display: flex;
+}
+
+input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+input:focus {
+    border-color: #C455A8;
+}
+
+button {
+    background: #C455A8;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(196, 85, 168, 0.15);
+}
+
+button:hover {
+    background: #a03e8c;
+    transform: translateY(-2px) scale(1.03);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

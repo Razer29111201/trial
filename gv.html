@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="icon" href="./assets/img/Screenshot 2025-06-25 153820.png" type="image/png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <style>
+        .header_body {
+            position: sticky;
+        }
+    </style>
 
 </head>
 
@@ -24,187 +29,218 @@
             <div class="col m-10">
 
                 <div class="container">
-                    <div class="scroll">
-                        <table id="taskTable" class="gvchiso item hidden ">
-                            <thead width="100%">
-                                <tr width="100%">
-                                    <th>STT</th>
-                                    <th>Tên giáo viên</th>
-                                    <th>Code LMS</th>
-                                    <th>CPR</th>
-                                    <th>TP</th>
-                                    <th>Trung bình sư phạm</th>
-                                    <th colspan="2">Kiểm tra chuyên sâu</th>
-                                    <th>Sư phạm</th>
-                                    <th>Tổng điểm</th>
-                                    <th>Rank</th>
-                                    <th>Đánh giá</th>
-                                </tr>
-                                <tr width="100%">
-                                    <th colspan="6"></th>
-                                    <th>Technical</th>
-                                    <th>Trial</th>
-                                    <th colspan="4"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Nguyễn Văn A</td>
-                                    <td>GV001</td>
-                                    <td>8.5</td>
-                                    <td>7.0</td>
-                                    <td>8.0</td>
-                                    <td>9.0</td>
-                                    <td>8.5</td>
-                                    <td>8.2</td>
-                                    <td>8.4</td>
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Trần Thị B</td>
-                                    <td>GV002</td>
-                                    <td>8.0</td>
-                                    <td>7.5</td>
-                                    <td>8.3</td>
-                                    <td>8.8</td>
-                                    <td>8.0</td>
-                                    <td>8.1</td>
-                                    <td>8.2</td>
-                                    <td>B</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Lê Văn C</td>
-                                    <td>GV003</td>
-                                    <td>7.5</td>
-                                    <td>7.2</td>
-                                    <td>7.8</td>
-                                    <td>8.0</td>
-                                    <td>7.9</td>
-                                    <td>7.7</td>
-                                    <td>7.8</td>
-                                    <td>C</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="scroll">
-                        <table id="taskTable" class="gvthongtin item">
-                            <thead>
-                                <tr>
-                                    <th>Mã Giáo Viên</th>
-                                    <th>Tên giáo viên</th>
-                                    <th>Code LMS</th>
-                                    <th>Bộ Phận</th>
-                                    <th>Email Cá Nhân</th>
-                                    <th>Email công việc</th>
-                                    <th>Rate</th>
+                    <div class="item hidden ">
 
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Nguyễn Văn A</td>
-                                    <td>GV001</td>
-                                    <td>8.5</td>
-                                    <td>7.0</td>
-                                    <td>8.0</td>
-                                    <td>9.0</td>
-                                    <td>8.5</td>
-                                    <td>8.2</td>
-                                    <td>8.4</td>
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Trần Thị B</td>
-                                    <td>GV002</td>
-                                    <td>8.0</td>
-                                    <td>7.5</td>
-                                    <td>8.3</td>
-                                    <td>8.8</td>
-                                    <td>8.0</td>
-                                    <td>8.1</td>
-                                    <td>8.2</td>
-                                    <td>B</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Lê Văn C</td>
-                                    <td>GV003</td>
-                                    <td>7.5</td>
-                                    <td>7.2</td>
-                                    <td>7.8</td>
-                                    <td>8.0</td>
-                                    <td>7.9</td>
-                                    <td>7.7</td>
-                                    <td>7.8</td>
-                                    <td>C</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="scroll">
+
+
+                            <table id="taskTable" class="gvchiso  ">
+
+                                <thead width="100%">
+                                    <tr width="100%">
+                                        <th>STT</th>
+                                        <th>Tên giáo viên</th>
+                                        <th>Code LMS</th>
+                                        <th>CPR</th>
+                                        <th>TP</th>
+                                        <th>Trung bình sư phạm</th>
+                                        <th colspan="2">Kiểm tra chuyên sâu</th>
+                                        <th>Sư phạm</th>
+                                        <th>Tổng điểm</th>
+                                        <th>Rank</th>
+                                        <th>Đánh giá</th>
+                                    </tr>
+                                    <tr width="100%">
+                                        <th colspan="6"></th>
+                                        <th>Technical</th>
+                                        <th>Trial</th>
+                                        <th colspan="4"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>GV001</td>
+                                        <td>8.5</td>
+                                        <td>7.0</td>
+                                        <td>8.0</td>
+                                        <td>9.0</td>
+                                        <td>8.5</td>
+                                        <td>8.2</td>
+                                        <td>8.4</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Trần Thị B</td>
+                                        <td>GV002</td>
+                                        <td>8.0</td>
+                                        <td>7.5</td>
+                                        <td>8.3</td>
+                                        <td>8.8</td>
+                                        <td>8.0</td>
+                                        <td>8.1</td>
+                                        <td>8.2</td>
+                                        <td>B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Lê Văn C</td>
+                                        <td>GV003</td>
+                                        <td>7.5</td>
+                                        <td>7.2</td>
+                                        <td>7.8</td>
+                                        <td>8.0</td>
+                                        <td>7.9</td>
+                                        <td>7.7</td>
+                                        <td>7.8</td>
+                                        <td>C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    <div class="scroll">
-                        <table id="taskTable" class="gvNote hidden item">
-                            <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th style="width: 200px;">Tên giáo viên</th>
-                                    <th>Số Lượng</th>
-                                    <th>Tên Học Viên</th>
-                                    <th>Loại</th>
-                                    <th>Lớp</th>
-                                    <th>Buổi</th>
-                                    <th>Ngày</th>
-                                    <th>Bộ Môn</th>
-                                    <th>Tiền công</th>
-                                    <th>Ghi chú</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Nguyễn Văn A</td>
-                                    <td>GV001</td>
-                                    <td>8.5</td>
-                                    <td>7.0</td>
-                                    <td>8.0</td>
-                                    <td>9.0</td>
-                                    <td>8.5</td>
-                                    <td>8.2</td>
-                                    <td>8.4</td>
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Trần Thị B</td>
-                                    <td>GV002</td>
-                                    <td>8.0</td>
-                                    <td>7.5</td>
-                                    <td>8.3</td>
-                                    <td>8.8</td>
-                                    <td>8.0</td>
-                                    <td>8.1</td>
-                                    <td>8.2</td>
-                                    <td>B</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Lê Văn C</td>
-                                    <td>GV003</td>
-                                    <td>7.5</td>
-                                    <td>7.2</td>
-                                    <td>7.8</td>
-                                    <td>8.0</td>
-                                    <td>7.9</td>
-                                    <td>7.7</td>
-                                    <td>7.8</td>
-                                    <td>C</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="item">
+
+                        <div class="scroll">
+                            <table id="taskTable" class="gvthongtin ">
+                                <thead>
+                                    <tr>
+                                        <th>Mã Giáo Viên</th>
+                                        <th>Tên giáo viên</th>
+                                        <th>Code LMS</th>
+                                        <th>Bộ Phận</th>
+                                        <th>Email Cá Nhân</th>
+                                        <th>Email công việc</th>
+                                        <th>Rate</th>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>GV001</td>
+                                        <td>8.5</td>
+                                        <td>7.0</td>
+                                        <td>8.0</td>
+                                        <td>9.0</td>
+                                        <td>8.5</td>
+                                        <td>8.2</td>
+                                        <td>8.4</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Trần Thị B</td>
+                                        <td>GV002</td>
+                                        <td>8.0</td>
+                                        <td>7.5</td>
+                                        <td>8.3</td>
+                                        <td>8.8</td>
+                                        <td>8.0</td>
+                                        <td>8.1</td>
+                                        <td>8.2</td>
+                                        <td>B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Lê Văn C</td>
+                                        <td>GV003</td>
+                                        <td>7.5</td>
+                                        <td>7.2</td>
+                                        <td>7.8</td>
+                                        <td>8.0</td>
+                                        <td>7.9</td>
+                                        <td>7.7</td>
+                                        <td>7.8</td>
+                                        <td>C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="item hidden">
+                        <div class="header_body">
+                            <div class="add-task">
+                                <label>Từ ngày:</label>
+                                <input type="date" id="startDate">
+
+                                <label>Đến ngày:</label>
+                                <input type="date" id="endDate">
+                                <label>Giáo Viên:</label>
+                                <button id="btnFilter">Lọc</button>
+                                <select name="" id="teacherSelect">
+                                    <option value="">-- Tất cả --</option>
+                                </select>
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="scroll">
+                            <table id="taskTable" class="gvNote ">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th style="width: 200px;">Tên giáo viên</th>
+                                        <th>Số Lượng</th>
+                                        <th>Tên Học Viên</th>
+                                        <th>Loại</th>
+                                        <th>Lớp</th>
+                                        <th>Buổi</th>
+                                        <th>Ngày</th>
+                                        <th>Bộ Môn</th>
+                                        <th>Tiền công</th>
+                                        <th>Ghi chú</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>GV001</td>
+                                        <td>8.5</td>
+                                        <td>7.0</td>
+                                        <td>8.0</td>
+                                        <td>9.0</td>
+                                        <td>8.5</td>
+                                        <td>8.2</td>
+                                        <td>8.4</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Trần Thị B</td>
+                                        <td>GV002</td>
+                                        <td>8.0</td>
+                                        <td>7.5</td>
+                                        <td>8.3</td>
+                                        <td>8.8</td>
+                                        <td>8.0</td>
+                                        <td>8.1</td>
+                                        <td>8.2</td>
+                                        <td>B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Lê Văn C</td>
+                                        <td>GV003</td>
+                                        <td>7.5</td>
+                                        <td>7.2</td>
+                                        <td>7.8</td>
+                                        <td>8.0</td>
+                                        <td>7.9</td>
+                                        <td>7.7</td>
+                                        <td>7.8</td>
+                                        <td>C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
 
                     </div>
                 </div>
@@ -215,7 +251,7 @@
 
 
     <script src="./assets/js/sidebar.js"></script>
-    <script src="./assets/js/gv.js"></script>
+    <script type="module" src="./assets/js/gv.js"></script>
 
 </body>
 
